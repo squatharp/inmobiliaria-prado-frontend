@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/inmobiliaria-prado-frontend/public/assets/prado.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inmobiliaria Prado | Mérida</title>
+
+    <style>
+      /* Estilos para las flechas de Swiper en las cards */
+      .swiper-button-next, .swiper-button-prev {
+        color: #fff !important;
+        background: rgba(0, 0, 0, 0.3);
+        width: 35px !important;
+        height: 35px !important;
+        border-radius: 50%;
+        transform: scale(0.6);
+        transition: background 0.3s ease;
+      }
+
+      .swiper-button-next:hover, .swiper-button-prev:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 16px !important;
+        font-weight: bold;
+      }
+
+      /* Estilos para los puntitos (paginación) */
+      .swiper-pagination-bullet {
+        background: #fff !important;
+        opacity: 0.6;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #fff !important;
+        opacity: 1;
+      }
+
+      /* Efecto visual al pasar el mouse sobre la card */
+      .card-hover {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+      }
+
+      /* Ajuste para que el carrusel respete los bordes redondeados de la card */
+      .swiper {
+        border-radius: 8px 8px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
