@@ -80,8 +80,8 @@ const Publish = () => {
     data.append('tipoDeOperacion', tipoDeOperacion);
     data.append('precio', precio);
     data.append('recamaras', recamaras);
-    data.append('banos', baños);
-    data.append('mediosBanos', mediosBaños);
+    data.append('banos', banos);
+    data.append('mediosBanos', mediosBanos);
     data.append('construccion', construccion);
     data.append('terreno', terreno);
     data.append('estado', estado);
