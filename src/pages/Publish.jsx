@@ -13,8 +13,8 @@ const Publish = () => {
         tipoDeOperacion: 'Venta',
         precio: '',
         recamaras: 0,
-        baños: 0,
-        mediosBaños: 0,
+        banos: 0,
+        mediosBanos: 0,
         construccion: 0,
         terreno: 0,
         estado: 'Yucatán',
@@ -37,7 +37,7 @@ const Publish = () => {
 
     const { 
         tipoDePropiedad, otroTipoDePropiedad, titulo, descripcion, tipoDeOperacion, 
-        precio, recamaras, baños, mediosBaños, construccion, terreno, estado, ciudad, colonia 
+        precio, recamaras, banos, mediosBanos, construccion, terreno, estado, ciudad, colonia 
     } = formData;
 
     const onChange = (e) => {
