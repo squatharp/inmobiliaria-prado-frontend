@@ -12,7 +12,6 @@ const initialState = {
 // Crear publicación
 export const crearPublicacion = createAsyncThunk('publicaciones/crear', async (publicacionData, thunkAPI) => {
     try {
-        // AQUÍ ESTÁ LA MAGIA: Obtenemos el token del estado de AUTH
         const token = thunkAPI.getState().auth.user.token
         return await publicacionService.crearPublicacion(publicacionData, token)
     } catch (error) {

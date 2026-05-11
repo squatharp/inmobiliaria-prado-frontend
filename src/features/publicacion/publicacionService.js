@@ -7,8 +7,7 @@ const crearPublicacion = async (publicacionData, token) => {
     const config = {
         headers: {
             Authorization: `Bearer ${token}`,
-            // Nota: No forzamos Content-Type aquí, 
-            // dejamos que el FormData lo haga automáticamente
+            
         }
     }
     const response = await axios.post(API_URL, publicacionData, config)

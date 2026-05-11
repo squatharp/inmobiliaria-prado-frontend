@@ -9,7 +9,7 @@ import Spinner from "../components/Spinner"
 const Login = () => {
     const [formData, setFormData] = useState({
       email: '',
-      password: '' // Mantenemos el estado local como password por comodidad
+      password: '' 
     })
 
     const { email, password } = formData
@@ -41,7 +41,6 @@ const Login = () => {
     const onSubmit = (e) => {
       e.preventDefault()
       
-      // IMPORTANTE: Mapeamos password a contrasena para tu backend
       const userData = {
         email,
         contrasena: password 
@@ -57,7 +56,6 @@ const Login = () => {
   return (
     <div className="container py-5">
       <div className="row justify-content-center">
-        {/* Definimos que en pantallas grandes ocupe 4 columnas y esté centrado */}
         <div className="col-12 col-md-6 col-lg-4">
           <div className="card shadow-lg border-0 p-4 rounded-3">
             

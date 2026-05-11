@@ -19,7 +19,7 @@ const Header = () => {
         <header>
             <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
                 <div className="container-fluid">
-                    {/* LOGO A LA IZQUIERDA */}
+                    {/* logo a la izquierda */}
                     <Link className="navbar-brand" to="/">
                         <img 
                             src="/assets/prado.png" 
@@ -29,7 +29,7 @@ const Header = () => {
                         />
                     </Link>
 
-                    {/* BOTÓN PARA MÓVILES */}
+                    {/* botón para móviles */}
                     <button 
                         className="navbar-toggler" 
                         type="button" 
@@ -43,7 +43,7 @@ const Header = () => {
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarColor01">
-                        {/* ENLACES DE NAVEGACIÓN (Izquierda) */}
+                        {/* enlaces de navegación a la izquierda  */}
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
                                 <a className="nav-link" href="/#quienes-somos-text">¿Quiénes Somos?</a>
@@ -53,7 +53,7 @@ const Header = () => {
                             </li>
                         </ul>
 
-                        {/* BOTONES DE AUTH (Derecha) */}
+                        {/* botones de auth */}
                         <ul className="navbar-nav ms-auto">
                             {user ? (
                                 <>

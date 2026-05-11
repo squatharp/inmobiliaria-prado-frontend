@@ -50,7 +50,7 @@ const Register = () => {
         const userData = {
           nombre, 
           email, 
-          contrasena : password // Sincronizado con tu Backend
+          contrasena : password 
         }
         dispatch(register(userData))
       }
@@ -63,7 +63,6 @@ const Register = () => {
   return (
     <div className="container py-5">
       <div className="row justify-content-center">
-        {/* Ajustamos el ancho para que el formulario de registro se vea equilibrado */}
         <div className="col-12 col-md-8 col-lg-5">
           <div className="card shadow-lg border-0 p-4 rounded-3">
             

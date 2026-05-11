@@ -50,7 +50,7 @@ const Publish = () => {
     const onFileChange = (e) => {
         if (e.target.files.length > 50) {
             toast.error('No puedes subir más de 50 archivos');
-            e.target.value = null; // Resetea el input
+            e.target.value = null; 
             return;
         }
         setImagenes(e.target.files);
@@ -59,7 +59,6 @@ const Publish = () => {
     const onSubmit = async (e) => {
     e.preventDefault();
 
-    // 1. Verificación de seguridad antes de mover un dedo
     if (!user || !user.token) {
         console.error("ERROR: El objeto user no tiene token:", user);
         toast.error('Tu sesión no es válida. Por favor, cierra sesión y vuelve a entrar.');
@@ -70,7 +69,6 @@ const Publish = () => {
 
     const data = new FormData();
     
-    // Append de todos los campos
     data.append('tipoDePropiedad', tipoDePropiedad);
     if (tipoDePropiedad === 'Otro') {
         data.append('otroTipoDePropiedad', otroTipoDePropiedad);
@@ -96,11 +94,10 @@ const Publish = () => {
         const config = {
             headers: {
                 'Content-Type': 'multipart/form-data',
-                'Authorization': `Bearer ${user.token}`, // <--- Aquí ya no será undefined
+                'Authorization': `Bearer ${user.token}`,
             },
         };
 
-        // Enviamos a Render
         await axios.post('https://inmobiliaria-prado-backend.onrender.com/api/publicaciones', data, config);
         
         toast.success('¡Propiedad en ' + colonia + ' publicada!');

@@ -2,8 +2,6 @@ import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaWhatsapp, FaArrowLeft, FaBed, FaBath, FaMapMarkerAlt, FaRulerCombined, FaHome, FaToilet } from 'react-icons/fa';
-
-// Swiper para el carrusel
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -41,7 +39,7 @@ const PropertyDetail = () => {
             </Link>
 
             <div className="row">
-                {/* COLUMNA IZQUIERDA: IMÁGENES */}
+                {/* imágenes */}
                 <div className="col-lg-8 mb-4">
                     <div className="shadow-lg rounded overflow-hidden">
                         <Swiper
@@ -60,7 +58,7 @@ const PropertyDetail = () => {
                     </div>
                 </div>
 
-                {/* COLUMNA DERECHA: INFORMACIÓN DETALLADA */}
+                {/* información y detalles */}
                 <div className="col-lg-4">
                     <div className="card border-0 shadow-sm p-4 h-100">
                         <div className="mb-2">
@@ -82,7 +80,7 @@ const PropertyDetail = () => {
                         
                         <hr />
                         
-                        {/* ICONOS PRINCIPALES (HAB / BAÑOS) */}
+                        {/* iconos de hab y baños */}
                         <div className="row text-center mb-4 g-2">
                             {propiedad.recamaras > 0 && (
                                 <div className="col border-end">
@@ -105,7 +103,7 @@ const PropertyDetail = () => {
                             )}
                         </div>
 
-                        {/* DATOS DE CONSTRUCCIÓN Y TERRENO (SOLO SI EXISTEN) */}
+                        {/* datos de construcción y terreno */}
                         <div className="bg-light p-3 rounded mb-4">
                             <div className="row">
                                 {propiedad.construccion > 0 && (

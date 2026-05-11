@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { FaSearch, FaBed, FaBath, FaMapMarkerAlt } from 'react-icons/fa';
-// Imports de Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -37,30 +36,27 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            {/* SECCIÓN HERO - CORREGIDA Y OPTIMIZADA */}
+            {/* sección hero */}
             <section 
                 className="hero bg-dark text-white text-center shadow-lg" 
                 style={{ 
-                    // 1. Degradado mucho más suave (0.4 opacidad) y ruta absoluta
                     backgroundImage: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/assets/merida.png")', 
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    backgroundAttachment: 'fixed', // Efecto parallax genial
-                    // 2. Altura mínima generosa (500px) y centrado perfecto
+                    backgroundAttachment: 'fixed', 
                     minHeight: '500px',
                     display: 'flex',
                     alignItems: 'center',
-                // Evitamos que la imagen se vea incompleta
                     overflow: 'hidden',
                     color: "white"
                 }}
 >
     <div className="container">
-        {/* 3. Título con mayor peso visual y un sutil text-shadow para que no se pierda */}
+        
         <h1 className="display-3 fw-bold text-uppercase tracking-wider" 
             style={{ 
                 letterSpacing: '3px',
-                textShadow: '2px 2px 8px rgba(255, 255, 255, 0.7)' // Sombrita para legibilidad
+                textShadow: '2px 2px 8px rgba(255, 255, 255, 0.7)' 
             }}
         >
             INMOBILIARIA PRADO
@@ -72,7 +68,7 @@ const Home = () => {
     </div>
 </section>
 
-            {/* SECCIÓN QUIÉNES SOMOS */}
+            {/* sección quienes somos */}
             <section id="quienes-somos-text" className="container py-5">
                 <div className="row align-items-center">
                     <div className="col-md-5 text-center mb-4 mb-md-0">
@@ -100,12 +96,12 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* SECCIÓN PROPIEDADES */}
+            {/* sección propiedades */}
             <section id="Propiedades" className="bg-light py-5">
                 <div className="container">
                     <h2 className="text-center fw-bold mb-4 text-uppercase">Nuestras Propiedades</h2>
 
-                    {/* BUSCADOR */}
+                    {/* buscador */}
                     <div className="row justify-content-center mb-5">
                         <div className="col-md-6">
                             <div className="input-group input-group-lg shadow-sm">
@@ -123,7 +119,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    {/* GRID DE CARDS */}
+                    {/* cards */}
                     {loading ? (
                         <div className="text-center py-5">
                             <div className="spinner-border text-dark" role="status"></div>
@@ -135,7 +131,7 @@ const Home = () => {
                                 propiedadesFiltradas.map((p) => (
                                     <div className="col-md-4 mb-4" key={p._id}>
                                         <div className="card h-100 shadow-sm border-0 card-hover overflow-hidden">
-                                            {/* CARRUSEL DE IMÁGENES */}
+                                            {/* carrusel */}
                                             <div className="position-relative">
                                                 {p.multimedia && p.multimedia.length > 0 ? (
                                                     <Swiper
